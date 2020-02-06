@@ -13,7 +13,7 @@ public class ComparatorEx {
 		Arrays.sort(arr);
 		System.out.println("배열 정렬 : " + Arrays.toString(arr));
 		
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> list = new ArrayList<Integer>();		//Integer클래스의 Comparable 인터페이스를 구현한 compareTo()에 따라 정렬
 		list.add(5);
 		list.add(3);
 		list.add(8);
