@@ -8,6 +8,17 @@ public class StringContains {
         System.out.println(contains("test", "test"));
         System.out.println(contains("testandtest", "test"));
         System.out.println(contains("test", "test"));
+        System.out.println(contains("ttestest", "test"));
+        System.out.println();
+        
+        System.out.println(contains2("testtttabtestest", "test"));
+        System.out.println(contains2("a", "testaaaaaaaaaaaaaa"));
+        System.out.println(contains2("test", "test"));
+        System.out.println(contains2("testandtest", "test"));
+        System.out.println(contains2("test", "test"));
+        System.out.println(contains2("test", "testtest"));
+        System.out.println(contains2("ttttttesssssttttt", "test"));
+        System.out.println(contains2("ttestest", "test"));
         System.out.println();
         
         System.out.println("testtttabtestest".contains("test"));
@@ -15,6 +26,8 @@ public class StringContains {
         System.out.println("test".contains("test"));
         System.out.println("testandtest".contains("test"));
         System.out.println("test".contains("test"));
+        System.out.println("ttestest".contains("test"));
+        System.out.println();
     }
     
     public static boolean contains(String str, String include) {
@@ -43,6 +56,25 @@ public class StringContains {
             result = true;
         
         return result;
+    }
+    
+    public static boolean contains2(String str, String include) {
+    	if(str.length() < include.length())
+    		return false;
+    	
+    	for(int i=0; i<str.length(); i++) {
+    		int j = 0;
+    		if(str.charAt(i) == include.charAt(j)) {
+    			j++;
+    			for(int k=i+1; j<include.length(); k++, j++) {
+    				if(k>=str.length() || str.charAt(k) != include.charAt(j))
+    					break;
+    			}
+    			if(j == include.length())
+    				return true;
+    		}
+    	}
+    	return false;
     }
 
 }
