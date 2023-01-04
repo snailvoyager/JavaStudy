@@ -1,5 +1,8 @@
 package functional.chap06;
 
+import functional.chap06.model.Order;
+import functional.chap06.model.User;
+
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Arrays;

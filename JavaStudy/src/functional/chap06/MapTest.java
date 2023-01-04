@@ -1,5 +1,8 @@
 package functional.chap06;
 
+import functional.chap06.model.Order;
+import functional.chap06.model.User;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package functional.chap06;
+package functional.chap06.model;
 
 import java.math.BigDecimal;
 
