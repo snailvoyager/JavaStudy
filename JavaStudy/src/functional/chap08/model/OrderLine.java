@@ -7,11 +7,15 @@ public class OrderLine {
     private OrderLineType type;
     private long productId;
     private int quantity;
-    private BigDecimal amout;
+    private BigDecimal amount;
 
     public enum OrderLineType {
         PURCHASE,
         DISCOUNT
+    }
+
+    OrderLine OrderLine() {
+        return this;
     }
 
     public long getId() {
@@ -50,12 +54,12 @@ public class OrderLine {
         return this;
     }
 
-    public BigDecimal getAmout() {
-        return amout;
+    public BigDecimal getAmount() {
+        return amount;
     }
 
-    public OrderLine setAmout(BigDecimal amout) {
-        this.amout = amout;
+    public OrderLine setAmount(BigDecimal amount) {
+        this.amount = amount;
         return this;
     }
 
@@ -66,7 +70,7 @@ public class OrderLine {
                 ", type=" + type +
                 ", productId=" + productId +
                 ", quantity=" + quantity +
-                ", amout=" + amout +
+                ", amout=" + amount +
                 '}';
     }
 }
