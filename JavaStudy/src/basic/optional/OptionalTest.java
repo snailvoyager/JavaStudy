@@ -14,6 +14,7 @@ public class OptionalTest {
         System.out.println(notNullOptinal.get());
 
         Optional<String> nullableOptional = Optional.ofNullable(null);  //null 일 수도 있는 경우
+        nullableOptional = Optional.of("string");
         System.out.println(nullableOptional.orElse("is null"));
 
         //null 검사후 null 일 경우 새로운 객체 생성
@@ -28,5 +29,8 @@ public class OptionalTest {
 
         OptionalLong optionalLong = OptionalLong.of(1000L);
         System.out.println(optionalLong.getAsLong());
+
+        Optional<String> optionalValue = Optional.of("Hello");
+        optionalValue.ifPresent(value -> System.out.println("Value: " + value));    //값이 존재할 때 consumer 수행
     }
 }
