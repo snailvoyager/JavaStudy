@@ -32,5 +32,11 @@ public class OptionalTest {
 
         Optional<String> optionalValue = Optional.of("Hello");
         optionalValue.ifPresent(value -> System.out.println("Value: " + value));    //값이 존재할 때 consumer 수행
+
+        Optional<String> optionalIfPresentOrElseValue = Optional.of("Hello");
+        optionalIfPresentOrElseValue.ifPresentOrElse(
+                value -> System.out.println("Value: " + value),	//출력: "Value: Hello"
+                () -> System.out.println("Optional is empty")	//Optional이 비어있을 때 Runnable 수행
+        );
     }
 }
